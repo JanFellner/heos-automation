@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --cache --fix -c .eslintrc.precommit.cjs src/**/*.{js,ts}",
-    "lintclear": "find . -name .eslintcache -delete",
+    "lintclear": "node delete-eslintcache.js",
     "clean": "npx --yes rimraf dist",
     "relint": "run-s clean lintclear lint",
     "lintnocache": "eslint --fix -c .eslintrc.precommit.cjs src/**/*.{js,ts}",
@@ -32,6 +32,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-tsdoc": "^0.2.17",
     "express": "^4.19.2",
+    "heos-api": "^4.0.0",
     "npm-run-all": "^4.1.5",
     "typescript": "^5.5.4"
   }
