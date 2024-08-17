@@ -1,0 +1,38 @@
+{
+  "name": "hyundai-soc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --cache --fix -c .eslintrc.precommit.cjs src/**/*.{js,ts}",
+    "lintclear": "find . -name .eslintcache -delete",
+    "clean": "npx --yes rimraf dist",
+    "relint": "run-s clean lintclear lint",
+    "lintnocache": "eslint --fix -c .eslintrc.precommit.cjs src/**/*.{js,ts}",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "serve": "npm ci && npm run build && npm run start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@estos/ucconfig": "github:ESTOS/ucconfig",
+    "@estos/uclogger": "^0.0.26",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.2.0",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-deprecation": "^3.0.0",
+    "eslint-plugin-github": "^4.10.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsdoc": "^48.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-tsdoc": "^0.2.17",
+    "express": "^4.19.2",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.5.4"
+  }
+}
